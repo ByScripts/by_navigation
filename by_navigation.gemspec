@@ -7,18 +7,17 @@ require "by_navigation/version"
 Gem::Specification.new do |s|
   s.name        = "by_navigation"
   s.version     = ByNavigation::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of ByNavigation."
-  s.description = "TODO: Description of ByNavigation."
+  s.authors     = ["Thierry Goettelmann"]
+  s.email       = ["byscripts@gmail.com"]
+  s.homepage    = "https://github.com/ByScripts/by_navigation"
+  s.summary     = "Menu builder gem."
+  s.description = "First try of a menu builder gem, with generators for installation and copying default view."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 3.2.11"
   s.add_dependency "stringex", "~> 1.5.1"
-  # s.add_dependency "jquery-rails"
 
   s.add_development_dependency "sqlite3"
 end
