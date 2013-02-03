@@ -1,0 +1,24 @@
+<%= content_tag(:ul, id: "#{container.html_id}-list",
+                     class: "#{container.html_class} list depth-#{container.depth}") do %>
+
+  <% items.each do |item| %>
+
+    <%= content_tag(:li, id: "#{item.html_id}-item}",
+                         class: "#{item.html_class} item depth-#{item.depth}",
+                         data: { url: item.url }) do %>
+
+      <%= content_tag(:div, id: "#{item.html_id}-item-content}",
+                            class: "#{item.html_class} item-content depth-#{item.depth}") do %>
+
+        <%= content_tag((item.has_link ? :a : :span),
+                        item.title,
+                        id: "#{item.html_id}-item-label",
+                        class: "#{item.html_class} item-label depth-#{item.depth}",
+                        href: (item.url if item.has_link)) %>
+
+        <%= navigation_for(item, layout, options) %>
+
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
