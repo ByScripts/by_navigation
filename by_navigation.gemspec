@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email       = ["byscripts@gmail.com"]
   s.homepage    = "https://github.com/ByScripts/by_navigation"
   s.summary     = "Menu builder gem."
-  s.description = "First try of a menu builder gem, with generators for installation and copying default view."
+  s.description = "Rails navigation menu builder."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
