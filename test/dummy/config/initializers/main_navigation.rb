@@ -1,10 +1,18 @@
-ByNavigation::Configuration.new :main do
+ByNavigation::Configuration.new :main_nav do
 
-  item :page_1, "Page 1"
-  item :page_2, "Page 2" do
-    no_link
-    item :page_2_1, "Page 2.1"
-    item :page_2_2, "Page 2.2"
+  item :home, "Home"
+
+  item :media, "Multimedia" do
+
+    item :audio, "Audio" do
+      item :mp3, "MP3"
+      item :flac, "FLAC"
+    end
+
+    item :video, "Video" do
+      item :avi, "AVI"
+      item :mkv, "MKV"
+    end
   end
-  item :page_3, "Page 3"
+
 end

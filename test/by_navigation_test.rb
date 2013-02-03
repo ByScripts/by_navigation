@@ -3,7 +3,7 @@ require 'test_helper'
 class ByNavigationTest < ActiveSupport::TestCase
 
   def setup
-    ByNavigation::Configuration.new :main do
+    ByNavigation::Configuration.new :main_nav do
 
       item :level_1, "Level 1" do
 
@@ -33,11 +33,11 @@ class ByNavigationTest < ActiveSupport::TestCase
       end
     end
 
-    @main = ByNavigation::Configuration.get_item(:main)
-    @level1 = ByNavigation::Configuration.get_item(:main_level_1)
-    @level2 = ByNavigation::Configuration.get_item(:main_level_1_level_2)
-    @level3 = ByNavigation::Configuration.get_item(:main_level_1_level_2_level_3)
-    @level4 = ByNavigation::Configuration.get_item(:main_level_1_level_2_level_3_level_4)
+    @main = ByNavigation::Configuration.get_item(:main_nav)
+    @level1 = ByNavigation::Configuration.get_item(:main_nav_level_1)
+    @level2 = ByNavigation::Configuration.get_item(:main_nav_level_1_level_2)
+    @level3 = ByNavigation::Configuration.get_item(:main_nav_level_1_level_2_level_3)
+    @level4 = ByNavigation::Configuration.get_item(:main_nav_level_1_level_2_level_3_level_4)
   end
 
   test "should have a level1 item" do
@@ -59,37 +59,37 @@ class ByNavigationTest < ActiveSupport::TestCase
 
 
   test "should have correct html_class for level1" do
-    assert_equal 'main level-1', @level1.html_class
+    assert_equal 'main-nav level-1', @level1.html_class
   end
 
   test "should have correct html_class for level2" do
-    assert_equal 'main level-1 level-2', @level2.html_class
+    assert_equal 'main-nav level-1 level-2', @level2.html_class
   end
 
   test "should have correct html_class for level3" do
-    assert_equal 'main level-1 level-2 love-css3', @level3.html_class
+    assert_equal 'main-nav level-1 level-2 love-css3', @level3.html_class
   end
 
   test "should have correct html_class for level4" do
-    assert_equal 'main level-1 level-2 love-css3 level-4', @level4.html_class
+    assert_equal 'main-nav level-1 level-2 love-css3 level-4', @level4.html_class
   end
 
 
 
   test "should have correct html_id for level1" do
-    assert_equal 'main-level-one', @level1.html_id
+    assert_equal 'main-nav-level-one', @level1.html_id
   end
 
   test "should have correct html_id for level2" do
-    assert_equal 'main-level-one-level-2', @level2.html_id
+    assert_equal 'main-nav-level-one-level-2', @level2.html_id
   end
 
   test "should have correct html_id for level3" do
-    assert_equal 'main-level-one-level-2-level-3', @level3.html_id
+    assert_equal 'main-nav-level-one-level-2-level-3', @level3.html_id
   end
 
   test "should have correct html_id for level4" do
-    assert_equal 'main-level-one-level-2-level-3-level-4', @level4.html_id
+    assert_equal 'main-nav-level-one-level-2-level-3-level-4', @level4.html_id
   end
 
 
