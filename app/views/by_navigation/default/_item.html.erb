@@ -1,0 +1,17 @@
+<%= content_tag(:li, id: "#{item.html_id}-item}",
+                     class: "#{item.html_class}",
+                     data: { url: item.url }) do %>
+
+  <%= content_tag(:div, id: "#{item.html_id}-content}",
+                        class: "#{item.html_class}") do %>
+
+    <%= content_tag((item.has_link ? :a : :span),
+                    item.title,
+                    id: "#{item.html_id}-label",
+                    class: "#{item.html_class}",
+                    href: (item.url if item.has_link)) %>
+
+    <%= navigation_for(item, layout, options) %>
+
+  <% end %>
+<% end %>

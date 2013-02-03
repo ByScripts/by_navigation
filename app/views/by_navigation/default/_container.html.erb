@@ -1,0 +1,7 @@
+<%= content_tag(:ul, id: "#{container.html_id}",
+                     class: "#{container.html_class} depth-#{container.depth}") do %>
+
+  <% items.each do |item| %>
+    <%= navigation_item_for(item, layout, options) %>
+  <% end %>
+<% end %>
