@@ -69,7 +69,7 @@ module ByNavigation
     end
 
     def params
-      (@parent && @parent.params_propagated).merge(@params).delete_if { |k, v| v.nil? }
+      ((@parent && @parent.params_propagated) || {}).merge(@params).delete_if { |k, v| v.nil? }
     end
 
     def param(key)
