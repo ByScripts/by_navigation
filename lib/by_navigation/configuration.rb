@@ -18,6 +18,7 @@ module ByNavigation
     end
 
     def self.get_item(id_or_url = :main)
+      id_or_url = "/#{id_or_url}" if id_or_url.is_a?(String) && !id_or_url.start_with?('/')
       id_or_url.is_a?(Symbol) ? get_item_by_id(id_or_url) : get_item_by_url(id_or_url)
     end
 
