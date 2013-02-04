@@ -8,7 +8,7 @@
     <%= content_tag((item.has_link ? :a : :span),
                     item.title,
                     id: "#{item.html_id}-label",
-                    class: "#{item.html_class}",
+                    class: "#{item.html_class} label",
                     href: (item.url if item.has_link)) %>
 
     <%= navigation_for(item, layout, options) %>
