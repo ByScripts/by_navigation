@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    by_navigation (0.0.1)
+    by_navigation (0.0.3)
       rails (~> 3.2.11)
       stringex (~> 1.5.1)
 

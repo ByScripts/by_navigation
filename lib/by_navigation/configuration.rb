@@ -8,6 +8,7 @@ module ByNavigation
     end
 
     def register(item)
+      return if item.is_a?(ItemAlias)
       @@registered_by_id[item.id] = item
       @@registered_by_url[item.url] = item
       item.children.each { |c| self.register(c) }

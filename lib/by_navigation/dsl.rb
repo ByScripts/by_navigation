@@ -5,6 +5,10 @@ module ByNavigation
       instance_eval(&block)
     end
 
+    def item_alias(origin_id, title = nil)
+      @item.add_child(ByNavigation::ItemAlias.new(origin_id, title))
+    end
+
     def item(id, title, options = {}, &block)
       @item.add_child(ByNavigation::Item.new(id, title, options, &block))
     end

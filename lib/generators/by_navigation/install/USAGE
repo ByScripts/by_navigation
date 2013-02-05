@@ -1,0 +1,8 @@
+Description:
+    Install a ByNavigation initializer
+
+Example:
+    rails generate by_navigation:install admin_nav
+
+    This will create:
+        config/initializers/by_navigation/admin_nav.rb
